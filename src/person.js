@@ -10,15 +10,27 @@ export default class Person {
 earthAge() {
   return this.age
 }
-
-planetsAge() {
+mercuryAge() {
     let mercuryAge = (this.age * .24).toFixed(2);
-    let venusAge = (this.age * .62).toFixed(2);
-    let marsAge = (this.age * 1.88).toFixed(2);
-    let jupiterAge = (this.age * 11.86).toFixed(2);
-    let concactedPlanets = "Mercury age is: " + mercuryAge + ". " + "Venus age is: " + venusAge + ". " + "Mars age is: " + marsAge + ". " + "Jupiter age is: " + jupiterAge + ".";
-    return concactedPlanets;
-  };
+    return mercuryAge;
+};
+venusAge() {
+  let venusAge = (this.age * .62).toFixed(2);
+  return venusAge;
+};
+marsAge() {
+  let marsAge = (this.age * 1.88).toFixed(2);
+  return marsAge;
+};
+jupiterAge() {
+  let jupiterAge = (this.age * 11.86).toFixed(2);
+  return jupiterAge;
+};
+
+displayAges() {
+  let concactedPlanets = "Mercury age is: " + mercuryAge + ". " + "Venus age is: " + venusAge + ". " + "Mars age is: " + marsAge + ". " + "Jupiter age is: " + jupiterAge + ".";
+  return concactedPlanets;
+}
 
 lifeGender () {
   if (this.gender = "female") { 
