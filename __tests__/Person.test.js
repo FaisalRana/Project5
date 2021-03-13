@@ -2,13 +2,14 @@ import Person from './../src/person.js';
 
 describe('Person', () => {
 let person1;
+let lifeExpetency;
 
  beforeEach(() => {
-  person1 = new Person("Faisal", 34, "male", "Asian");
+  person1 = new Person("Faisal", 34, "male", "asian");
   });
 
   test('Test should create an person object with their name, age, gender and race', () => {
-    expect(person1).toEqual({"age": 34, "gender": "male", "name": "Faisal", "race": "Asian"});
+    expect(person1).toEqual({"age": 34, "gender": "male", "name": "Faisal", "race": "asian"});
   });
 
   test('Test should return the Earth Age of a person', () => {
@@ -17,5 +18,8 @@ let person1;
 
   test('Test should return the Age for Mercury, Mars, Venus and Juputer', () => {
     expect(person1.planetsAge()).toEqual("Mercury age is: 8.16. Venus age is: 21.08. Mars age is: 63.92. Jupiter age is: 403.24.");        
+  });
+  test('Test should return the life exptency adjusted for gender', () => {
+    expect(person1.lifeGender()).toEqual(81);        
   });
 });
