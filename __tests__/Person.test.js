@@ -16,6 +16,6 @@ let person1;
   });
 
   test('Test should return the Age for Mercury, Mars, Venus and Juputer', () => {
-    expect(person1.planetsAge()).toEqual();        
+    expect(person1.planetsAge()).toEqual("Mercury age is: 8.16. Venus age is: 21.08. Mars age is: 63.92. Jupiter age is: 403.24.");        
   });
 });
