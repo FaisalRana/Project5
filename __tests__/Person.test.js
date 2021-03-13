@@ -1,8 +1,9 @@
-import sudokuChecker from './../src/person.js';
+import Person from './../src/person.js';
 
-describe('sudokuChecker', () => {
-
-  test('Test should return a boolean that is true', () => {
-    expect(sudokuChecker()).toEqual(true);
+describe('Person', () => {
+let person1;
+person1 = new Person("Faisal", 34, "male", "Asian");
+  test('Test should create an person object with their name, age, gender and race', () => {
+    expect(person1).toEqual();
   });
 });
