@@ -14,4 +14,8 @@ let person1;
   test('Test should return the Earth Age of a person', () => {
     expect(person1.earthAge()).toEqual(34);        
   });
+
+  test('Test should return the Age for Mercury, Mars, Venus and Juputer', () => {
+    expect(person1.planetsAge()).toEqual();        
+  });
 });

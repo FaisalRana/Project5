@@ -8,11 +8,12 @@ import Person from './person';
 $(document).ready(function() {
   $('#space-age-form').submit(function(event) {
     event.preventDefault();
-    let inputName = parseInt($('#inputName').val());
-    let inputAge = parseInt($('#inputAge').val());
-    let inputGender = parseInt($('#inputGender').val());
-    let inputRace = parseInt($('#inputRace').val());
-    let person = new Person(inputName, inputAge, inputGender, inputRace)
+    // let inputName = parseInt($('#inputName').val());
+    // let inputAge = parseInt($('#inputAge').val());
+    // let inputGender = parseInt($('#inputGender').val());
+    // let inputRace = parseInt($('#inputRace').val());
+    // let person = new Person(inputName, inputAge, inputGender, inputRace)
+    // let response = person.earthAge() 
     $('#response').append("<p>" + response + "</p>");
   });
 });
