@@ -4,6 +4,6 @@ describe('Person', () => {
 let person1;
 person1 = new Person("Faisal", 34, "male", "Asian");
   test('Test should create an person object with their name, age, gender and race', () => {
-    expect(person1).toEqual();
+    expect(person1).toEqual({"age": 34, "gender": "male", "name": "Faisal", "race": "Asian"});
   });
 });
