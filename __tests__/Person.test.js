@@ -2,7 +2,6 @@ import Person from './../src/person.js';
 
 describe('Person', () => {
 let person1;
-let lifeExpetency;
 
  beforeEach(() => {
   person1 = new Person("Faisal", 34, "male", "hispanic");
@@ -24,6 +23,10 @@ let lifeExpetency;
   });
   test('Test should return the life exptency adjusted for race', () => {
     expect(person1.lifeRace()).toEqual(71);        
+  });
+  
+  test('Test should return the number of years left on earth and each planet', () => {
+    expect(person1.timeLeft()).toEqual(71);        
   });
 
 });
