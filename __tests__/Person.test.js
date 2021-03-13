@@ -36,6 +36,7 @@ let person1;
   });
 
   test('Test should return the number of years left on earth and each planet', () => {
+    person1.mercuryAge();
     person1.earthAge();
     person1.lifeRace();
     person1.lifeGender();

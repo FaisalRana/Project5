@@ -61,12 +61,12 @@ lifeRace () {
 
 timeLeft(mercuryAge, marsAge, venusAge, jupiterAge) {
   let timeLeftEarth = this.lifeExpectency - this.age;
-  let timeLeftMercury = (this.lifeExpectency * .24) - mercuryAge;
+  let timeLeftMercury = mercuryAge;
   let timeLeftMars = (this.lifeExpectency * .62) - marsAge;
   let timeLeftVenus = (this.lifeExpectency * 1.88) - venusAge;
   let timeLeftJupiter = (this.lifeExpectency * 11.86) - jupiterAge;
   let concactedTime = "You have: " + timeLeftEarth + " years left on Earth " + timeLeftMercury + " years left on Mercury, " + timeLeftVenus +  " years left on Venus, " + timeLeftMars + " years left on Mars, " +  timeLeftJupiter + " years left on Jupiter!";
-  return timeLeftEarth;
+  return timeLeftMercury;
 }
 
 };  
