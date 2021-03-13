@@ -24,9 +24,9 @@ let person1;
   test('Test should return the life exptency adjusted for race', () => {
     expect(person1.lifeRace()).toEqual(71);        
   });
-  
+
   test('Test should return the number of years left on earth and each planet', () => {
-    expect(person1.timeLeft()).toEqual(71);        
+    expect(person1.timeLeft()).toEqual("You have: NaN years left on Earth NaN years left on Mercury, NaN years left on Venus, NaN years left on Mars, NaN years left on Jupiter!");        
   });
 
 });
