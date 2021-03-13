@@ -19,6 +19,6 @@ $(document).ready(function() {
     person1.lifeGender();
     let response1 = `${person1.timeLeft()}`;
     let response2 = `${person1.displayAges()}`;
-    $('#response').append("<p>" + response1 + "</br>" + response2);
+    $('#response').append("<p>" + response2 + "</br>" + response1);
   });
 });

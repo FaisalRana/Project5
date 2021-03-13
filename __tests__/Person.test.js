@@ -2,9 +2,21 @@ import Person from './../src/person.js';
 
 describe('Person', () => {
 let person1;
+let person2;
+let person3;
+let person4;
+let person5;
+let person6;
+
 
  beforeEach(() => {
   person1 = new Person("Faisal", 34, "female", "hispanic");
+  person2 = new Person("Faisal", 34, "male", "african");
+  person3 = new Person("Faisal", 34, "female", "caucasian");
+  person4 = new Person("Faisal", 34, "male", "native american");
+  person5 = new Person("Faisal", 34, "female", "asian");
+  person6 = new Person("Faisal", 34, "female", "pakistani");
+  
   });
 
   test('Test should create an person object with their name, age, gender and race', () => {
@@ -34,12 +46,22 @@ let person1;
   });
   test('Test should return the life exptency adjusted for race', () => {
     person1.lifeGender();
-    expect(person1.lifeRace()).toEqual(76);        
+    person2.lifeGender();
+    person3.lifeGender();
+    person4.lifeGender();
+    person5.lifeGender();
+    person6.lifeGender();
+    expect(person1.lifeRace()).toEqual(76);  
+    expect(person2.lifeRace()).toEqual(72);  
+    expect(person3.lifeRace()).toEqual(84);      
+    expect(person4.lifeRace()).toEqual(71);  
+    expect(person5.lifeRace()).toEqual(89);
+    expect(person6.lifeRace()).toEqual();  
   });
   test('Test should return the number of years left on earth and each planet', () => {
     person1.earthAge();
     person1.lifeRace();
     person1.lifeGender();
-    expect(person1.timeLeft()).toEqual("You have: 42 years left on Earth, 67.84 years left on Mercury, 26.04 years left on Venus, 78.96 years left on Mars, 498.12 years left on Jupiter.")
+    expect(person1.timeLeft()).toEqual("You have: 42.00 years left on Earth, 10.08 years left on Mercury, 26.04 years left on Venus, 78.96 years left on Mars, 498.12 years left on Jupiter.")
   });
 })

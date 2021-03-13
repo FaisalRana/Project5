@@ -42,6 +42,7 @@ export default class Person {
   lifeRace () {
     if (this.race === "asian") { 
       this.lifeExpectency += 8;
+      return this.lifeExpectency;
     } else if (this.race === "native american") {
       this.lifeExpectency -= 5;
       return this.lifeExpectency;
@@ -62,9 +63,9 @@ export default class Person {
     let venusAge = this.venusAge();
     let jupiterAge = this.jupiterAge();
     let timeLeftEarth = (this.lifeExpectency - this.age).toFixed(2);
-    let timeLeftMercury = (this.lifeExpectency - mercuryAge).toFixed(2);
+    let timeLeftMercury = ((this.lifeExpectency * .24) - mercuryAge).toFixed(2);
     let timeLeftMars = ((this.lifeExpectency * 1.88) - marsAge).toFixed(2);
-    let timeLeftVenus = ((this.lifeExpectency * .62) - venusAge).toFixed(2);
+    let timeLeftVenus = ( (this.lifeExpectency * .62) - venusAge).toFixed(2);
     let timeLeftJupiter = ((this.lifeExpectency * 11.86) - jupiterAge).toFixed(2);
     let concactedTime = `You have: ${timeLeftEarth} years left on Earth, ${timeLeftMercury} years left on Mercury, ${timeLeftVenus} years left on Venus, ${timeLeftMars} years left on Mars, ${timeLeftJupiter} years left on Jupiter.`;
     return concactedTime;
@@ -72,3 +73,5 @@ export default class Person {
 }
 
 
+// couldnt get multi-line template literals to work
+// wondering if there is a better way call the [planet]Age functions then saving their value as a variable. 
