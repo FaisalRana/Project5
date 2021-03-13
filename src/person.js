@@ -28,7 +28,11 @@ jupiterAge() {
 };
 
 displayAges() {
-  let concactedPlanets = "Mercury age is: " + mercuryAge + ". " + "Venus age is: " + venusAge + ". " + "Mars age is: " + marsAge + ". " + "Jupiter age is: " + jupiterAge + ".";
+  let mercuryAge = this.mercuryAge();
+  let marsAge = this.marsAge();
+  let venusAge = this.venusAge();
+  let jupiterAge = this.jupiterAge();
+  let concactedPlanets = `Your Earth age is ${this.age}, Mercury age is: ${mercuryAge}, Venus age is: ${venusAge}, Mars age is: ${marsAge}, Jupiter age is: ${jupiterAge}`
   return concactedPlanets;
 }
 
@@ -59,14 +63,18 @@ lifeRace () {
   } else return alert("ERROR: Please enter one of the following races: native american, asian, african, caucasian or hispanic")
 }
 
-timeLeft(mercuryAge, marsAge, venusAge, jupiterAge) {
+timeLeft() {
+  let mercuryAge = this.mercuryAge();
+  let marsAge = this.marsAge();
+  let venusAge = this.venusAge();
+  let jupiterAge = this.jupiterAge();
   let timeLeftEarth = this.lifeExpectency - this.age;
-  let timeLeftMercury = mercuryAge;
-  let timeLeftMars = (this.lifeExpectency * .62) - marsAge;
-  let timeLeftVenus = (this.lifeExpectency * 1.88) - venusAge;
-  let timeLeftJupiter = (this.lifeExpectency * 11.86) - jupiterAge;
-  let concactedTime = "You have: " + timeLeftEarth + " years left on Earth " + timeLeftMercury + " years left on Mercury, " + timeLeftVenus +  " years left on Venus, " + timeLeftMars + " years left on Mars, " +  timeLeftJupiter + " years left on Jupiter!";
-  return timeLeftMercury;
+  let timeLeftMercury = this.lifeExpectency - mercuryAge;
+  let timeLeftMars = (this.lifeExpectency * 1.88) - marsAge;
+  let timeLeftVenus = (this.lifeExpectency * .62) - venusAge;
+  let timeLeftJupiter = ((this.lifeExpectency * 11.86) - jupiterAge).toFixed(2);
+  let concactedTime = `You have: ${timeLeftEarth} years left on Earth, ${timeLeftMercury} years left on Mercury, ${timeLeftVenus} years left on Venus, ${timeLeftMars} years left on Mars, ${timeLeftJupiter} years left on Jupiter.`;
+  return concactedTime;
 }
 
 };  

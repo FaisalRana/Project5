@@ -23,9 +23,11 @@ let person1;
   test('Test should return the Venus age of a person', () => {
     expect(person1.venusAge()).toEqual("21.08");        
   });
-
   test('Test should return the Age for Jupiter age of a person', () => {
     expect(person1.jupiterAge()).toEqual("403.24");        
+  });
+  test('Test should return all age of a person on the five planets', () => {
+    expect(person1.displayAges()).toEqual(34);        
   });
   test('Test should return the life exptency adjusted for gender', () => {
     expect(person1.lifeGender()).toEqual(81);        
@@ -34,17 +36,10 @@ let person1;
     person1.lifeGender();
     expect(person1.lifeRace()).toEqual(76);        
   });
-  test('Test should return the life exptency adjusted for race', () => {
-    person1.displayAges();
-    expect(person1.displayAges()).toEqual(76);        
-  });
-
   test('Test should return the number of years left on earth and each planet', () => {
-    person1.mercuryAge();
     person1.earthAge();
     person1.lifeRace();
     person1.lifeGender();
-    expect(person1.timeLeft()).toEqual("You have: NaN years left on Earth NaN years left on Mercury, NaN years left on Venus, NaN years left on Mars, NaN years left on Jupiter!");        
+    expect(person1.timeLeft()).toEqual("You have: 42 years left on Earth, 67.84 years left on Mercury, 26.04 years left on Venus, 78.96 years left on Mars, 498.12 years left on Jupiter.")
   });
-
-});
+})
