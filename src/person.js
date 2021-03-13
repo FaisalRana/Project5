@@ -4,6 +4,7 @@ export default class Person {
     this.age = age;
     this.gender = gender;
     this.race = race;
+    this.lifeExpectency = 76
   }
 
 earthAge() {
@@ -20,30 +21,29 @@ planetsAge() {
   };
 
 lifeGender () {
-  let lifeExpectency = 76
   if (this.gender = "female") { 
-    lifeExpectency += 5
-    return lifeExpectency;
-  } else return lifeExpetency
+    this.lifeExpectency += 5
+    return this.lifeExpectency;
+  } else return this.lifeExpectency;
 }
 
 lifeRace () {
   if (this.race === "asian") {
   } else if (this.race === "native american") {
-    lifeExpectancy -= 5;
-    return lifeExptency
+    this.lifeExpectency -= 5;
+    return this.lifeExpectency
   } else if (this.race === "african") {
-    lifeExpectancy -= 4;
-    return lifeExptency
+    this.lifeExpectency -= 4;
+    return this.lifeExpectency
   } else if (this.race === "caucasian") {
-    lifeExpectancy += 3;
-    return lifeExptency
+    this.lifeExpectency += 3;
+    return this.lifeExpectency
   } else if (this.race === "hispanic") {
-    lifeExpectancy -= 5;
-    return lifeExptency
+    this.lifeExpectency -= 5;
+    return this.lifeExpectency
   } else if (this.race === "asian") {
-    lifeExpectancy -= 8;
-    return lifeExptency
+    this.lifeExpectency -= 8;
+    return this.lifeExpectency 
   } else return alert("ERROR: Please enter one of the following races: native american, asian, african, caucasian or hispanic")
 }
 timeLeft() {
