@@ -33,7 +33,7 @@ displayAges() {
 }
 
 lifeGender () {
-  if (this.gender = "female") { 
+  if (this.gender === "female") { 
     this.lifeExpectency += 5
     return this.lifeExpectency;
   } else return this.lifeExpectency;
@@ -58,18 +58,15 @@ lifeRace () {
     return this.lifeExpectency 
   } else return alert("ERROR: Please enter one of the following races: native american, asian, african, caucasian or hispanic")
 }
-timeLeft() {
-  let mercuryAge = (this.age * .24).toFixed(2);
-  let venusAge = (this.age * .62).toFixed(2);
-  let marsAge = (this.age * 1.88).toFixed(2);
-  let jupiterAge = (this.age * 11.86).toFixed(2);
-  let timeLeftEarth = (this.LifeExpectency - this.age);
-  let timeLeftMercury = (this.LifeExpectency * .24) - mercuryAge;
-  let timeLeftMars = (this.LifeExpectency * .62) - marsAge;
-  let timeLeftVenus = (this.LifeExpectency * 1.88) - venusAge;
-  let timeLeftJupiter = (this.LifeExpectency * 11.86) - jupiterAge;
+
+timeLeft(mercuryAge, marsAge, venusAge, jupiterAge) {
+  let timeLeftEarth = this.lifeExpectency - this.age;
+  let timeLeftMercury = (this.lifeExpectency * .24) - mercuryAge;
+  let timeLeftMars = (this.lifeExpectency * .62) - marsAge;
+  let timeLeftVenus = (this.lifeExpectency * 1.88) - venusAge;
+  let timeLeftJupiter = (this.lifeExpectency * 11.86) - jupiterAge;
   let concactedTime = "You have: " + timeLeftEarth + " years left on Earth " + timeLeftMercury + " years left on Mercury, " + timeLeftVenus +  " years left on Venus, " + timeLeftMars + " years left on Mars, " +  timeLeftJupiter + " years left on Jupiter!";
-  return concactedTime;
+  return timeLeftEarth;
 }
 
 };  
