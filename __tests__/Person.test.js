@@ -12,6 +12,6 @@ let person1;
   });
 
   test('Test should return the Earth Age of a person', () => {
-    expect(person1.earthAge()).toEqual();        
+    expect(person1.earthAge()).toEqual(34);        
   });
 });
