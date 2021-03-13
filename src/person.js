@@ -5,5 +5,9 @@ export default class Person {
     this.gender = gender;
     this.race = race;
   }
-};  
 
+earthAge() {
+  return this.age
+}
+
+};  
