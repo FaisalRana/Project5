@@ -34,6 +34,10 @@ let person1;
     person1.lifeGender();
     expect(person1.lifeRace()).toEqual(76);        
   });
+  test('Test should return the life exptency adjusted for race', () => {
+    person1.displayAges();
+    expect(person1.displayAges()).toEqual(76);        
+  });
 
   test('Test should return the number of years left on earth and each planet', () => {
     person1.mercuryAge();
