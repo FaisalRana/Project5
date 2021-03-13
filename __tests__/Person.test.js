@@ -27,7 +27,7 @@ let person1;
     expect(person1.jupiterAge()).toEqual("403.24");        
   });
   test('Test should return all age of a person on the five planets', () => {
-    expect(person1.displayAges()).toEqual(34);        
+    expect(person1.displayAges()).toEqual("Your Earth age is 34, Mercury age is: 8.16, Venus age is: 21.08, Mars age is: 63.92, Jupiter age is: 403.24");        
   });
   test('Test should return the life exptency adjusted for gender', () => {
     expect(person1.lifeGender()).toEqual(81);        
