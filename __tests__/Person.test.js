@@ -63,6 +63,6 @@ let person6;
     person1.lifeRace();
     person1.lifeGender();
     expect(person1.timeLeft()).toEqual("You have: 42.00 years left on Earth, 10.08 years left on Mercury, 26.04 years left on Venus, 78.96 years left on Mars, 498.12 years left on Jupiter.")
-    expect(person2.timeLeft()).toEqual();
+    expect(person2.timeLeft()).toEqual("You have lived 14 longer than expected on earth");
   })
 })

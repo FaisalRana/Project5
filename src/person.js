@@ -70,7 +70,7 @@ export default class Person {
     if (timeLeftEarth < 0) {
       let concactedTime = `You have lived ${Math.abs(timeLeftEarth)} longer than expected on earth`;
       return concactedTime;
-    } else if (timeLeftEarth > 0) {
+    } else if (timeLeftEarth) {
       let concactedTime = `You have: ${timeLeftEarth} years left on Earth, ${timeLeftMercury} years left on Mercury, ${timeLeftVenus} years left on Venus, ${timeLeftMars} years left on Mars, ${timeLeftJupiter} years left on Jupiter.`;
       return concactedTime;
     }
