@@ -40,19 +40,19 @@ export default class Person {
     } else return this.lifeExpectency;
   }
   lifeRace () {
-    if (this.race === "asian") { 
+    if (this.race === "asian" || this.race === "pakistani") { 
       this.lifeExpectency += 8;
       return this.lifeExpectency;
-    } else if (this.race === "native american") {
+    } else if (this.race === "native american" || this.race === "american indian") {
       this.lifeExpectency -= 5;
-      return this.lifeExpectency;
-    } else if (this.race === "african") {
+      return this.lifeExpectency;   
+    } else if (this.race === this.race === "african american" || this.race === "black" || this.race === "african") {
       this.lifeExpectency -= 4;
       return this.lifeExpectency;
-    } else if (this.race === "caucasian") {
+    } else if (this.race === "caucasian" || this.race === "white" || this.race ==="european") {
       this.lifeExpectency += 3;
       return this.lifeExpectency;
-    } else if (this.race === "hispanic") {
+    } else if (this.race === "latin american" || this.race === "hispanic" || this.race === "latina"|| this.race === "latino") {
       this.lifeExpectency -= 5;
       return this.lifeExpectency;
     }   else return alert("ERROR: Please enter one of the following races: native american, asian, african, caucasian or hispanic");
@@ -67,11 +67,12 @@ export default class Person {
     let timeLeftMars = ((this.lifeExpectency * 1.88) - marsAge).toFixed(2);
     let timeLeftVenus = ( (this.lifeExpectency * .62) - venusAge).toFixed(2);
     let timeLeftJupiter = ((this.lifeExpectency * 11.86) - jupiterAge).toFixed(2);
-    let concactedTime = `You have: ${timeLeftEarth} years left on Earth, ${timeLeftMercury} years left on Mercury, ${timeLeftVenus} years left on Venus, ${timeLeftMars} years left on Mars, ${timeLeftJupiter} years left on Jupiter.`;
-    return concactedTime;
+    if (timeLeftEarth < 0) {
+      let concactedTime = `You have lived ${Math.abs(timeLeftEarth)} longer than expected on earth`;
+      return concactedTime;
+    } else if (timeLeftEarth > 0) {
+      let concactedTime = `You have: ${timeLeftEarth} years left on Earth, ${timeLeftMercury} years left on Mercury, ${timeLeftVenus} years left on Venus, ${timeLeftMars} years left on Mars, ${timeLeftJupiter} years left on Jupiter.`;
+      return concactedTime;
+    }
   }
 }
-
-
-// couldnt get multi-line template literals to work
-// wondering if there is a better way call the [planet]Age functions then saving their value as a variable. 

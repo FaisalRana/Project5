@@ -1,4 +1,4 @@
-# Project 2: Spave Age Calculator
+# Project 2: Space Age Calculator
 
 By Faisal Rana
 
@@ -21,16 +21,18 @@ This is a website that will take a persons earth age and demographics as inputs 
 
 ## Tests
 
-Test 1 - Checks to see if constructor is created correctly. 
+Please see Person.test.js in the __tests__ folder for more detailed information. 
+
+- Test 1 - Checks to see if constructor is created correctly. 
 Person() <-- constructor
-Test 2 - Returns age for Earth in years
+- Test 2 - Returns age for Earth in years
 EarthAge();
-Test 3 - Returns age for Venus, Mercury, Mars and Juputer in years
+- Test 3 - Returns age for Venus, Mercury, Mars and Juputer in years
 PlanetAge();
-Test 4 - Returns age for Mars in years
-Test 5 - Returns age in Jupiter in years
-Test 6 - Determines life expetency on earth and returns time left.  
-Test 7 - Determines life expectency on other planets and returns time left. 
+- Test 4 - Returns age for Mars in years
+- Test 5 - Returns age in Jupiter in years
+- Test 6 - Determines life expetency on earth and returns time left.  
+- Test 7 - Determines life expectency on other planets and returns time left. 
 
 ## Program setup instructions
 To view, access the Github pages site in your preferred browser. 

@@ -11,11 +11,11 @@ let person6;
 
  beforeEach(() => {
   person1 = new Person("Faisal", 34, "female", "hispanic");
-  person2 = new Person("Faisal", 34, "male", "african");
+  person2 = new Person("Faisal", 90, "male", "african");
   person3 = new Person("Faisal", 34, "female", "caucasian");
   person4 = new Person("Faisal", 34, "male", "native american");
-  person5 = new Person("Faisal", 34, "female", "asian");
-  person6 = new Person("Faisal", 34, "female", "pakistani");
+  person5 = new Person("Faisal", 30, "female", "asian");
+  person6 = new Person("Faisal", 34, "female", "unknown");
   
   });
 
@@ -63,5 +63,6 @@ let person6;
     person1.lifeRace();
     person1.lifeGender();
     expect(person1.timeLeft()).toEqual("You have: 42.00 years left on Earth, 10.08 years left on Mercury, 26.04 years left on Venus, 78.96 years left on Mars, 498.12 years left on Jupiter.")
+    expect(person2.timeLeft()).toEqual();
   });
 })
