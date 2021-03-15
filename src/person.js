@@ -30,7 +30,7 @@ export default class Person {
     let marsAge = this.marsAge();
     let venusAge = this.venusAge();
     let jupiterAge = this.jupiterAge();
-    let concactedPlanets = `Your Earth age is ${this.age}, Mercury age is: ${mercuryAge}, Venus age is: ${venusAge}, Mars age is: ${marsAge}, Jupiter age is: ${jupiterAge}`;
+    let concactedPlanets = `${this.name}, your Earth age is ${this.age}, Mercury age is: ${mercuryAge}, Venus age is: ${venusAge}, Mars age is: ${marsAge}, Jupiter age is: ${jupiterAge}`;
     return concactedPlanets;
   }
   lifeGender () {
@@ -68,10 +68,10 @@ export default class Person {
     let timeLeftVenus = ( (this.lifeExpectency * .62) - venusAge).toFixed(2);
     let timeLeftJupiter = ((this.lifeExpectency * 11.86) - jupiterAge).toFixed(2);
     if (timeLeftEarth < 0) {
-      let concactedTime = `You have lived ${Math.abs(timeLeftEarth)} longer than expected on earth`;
+      let concactedTime = `Congratulations! You have lived ${Math.abs(timeLeftEarth)} years longer than expected on earth.`;
       return concactedTime;
-    } else if (timeLeftEarth) {
-      let concactedTime = `You have: ${timeLeftEarth} years left on Earth, ${timeLeftMercury} years left on Mercury, ${timeLeftVenus} years left on Venus, ${timeLeftMars} years left on Mars, ${timeLeftJupiter} years left on Jupiter.`;
+    } else {
+      let concactedTime = ` Good news! You have: ${timeLeftEarth} years left on Earth, ${timeLeftMercury} years left on Mercury, ${timeLeftVenus} years left on Venus, ${timeLeftMars} years left on Mars, ${timeLeftJupiter} years left on Jupiter.`;
       return concactedTime;
     }
   }
