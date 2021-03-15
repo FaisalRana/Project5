@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Space Age Calculator</title>
+</head>
+<body>
+<div class="container">
+  <div class="jumbotron">
+    <h1>Welcome to the universal planetary age assesment tool.</h1>
+    <p>Please enter your information in the form below to caculate your <span id="yellow"> age </span> and <span id="yellow">life expectency </span> throughout the solar system.</p>
+    <form id="space-age-form">
+      <label for="inputName"> What is your name?</label>
+      <input id="inputName" type="text" required>
+      <label for="inputAge"> What is your age on Earth?</label>
+      <input id="inputAge" type="number" required>
+      <label for="inputGender""> What is your gender? (e.g. male/female/other)</label>
+      <input id="inputGender" type="text" required>
+      <label for="inputRace">What is your Race? (e.g. native american, asian, black, white, latino, latina etc.)</label>
+      <input id="inputRace" type="text" required>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <button id="button" onClick="window.location.reload();">Refresh Page</button>
+  <ul id="response"></ul>
+</div>
+<script type="text/javascript" src="bundle.js"></script></body>
+</html>
