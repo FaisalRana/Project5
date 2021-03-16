@@ -1,4 +1,4 @@
-# Project 2: Space Age Calculator
+# Project 5: Space Age Calculator
 
 By Faisal Rana
 
@@ -21,10 +21,10 @@ This is a website that will take a persons earth age and demographics as inputs 
 
 ## Tests
 
-Please see Person.test.js in the __tests__ folder for more detailed information. 
+Please see Person.test.js in the __tests__ folder for more detailed information. This is a rough plan that the program was conceptually started with.
 
 - Test 1 - Checks to see if constructor is created correctly. 
-Person() <-- constructor
+Person();
 - Test 2 - Returns age for Earth in years
 EarthAge();
 - Test 3 - Returns age for Venus, Mercury, Mars and Juputer in years
@@ -44,7 +44,7 @@ To setup:
 - Run NPM Start or launch index.html from dist folder
 
 ## Github pages website
-https://faisalrana.github.io/Project5/
+https://faisalrana.github.io/Project5a/
 
 ## Copyright and license info
 
