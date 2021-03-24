@@ -32,7 +32,8 @@ PlanetAge();
 - Test 4 - Returns age for Mars in years
 - Test 5 - Returns age in Jupiter in years
 - Test 6 - Determines life expetency on earth and returns time left.  
-- Test 7 - Determines life expectency on other planets and returns time left. 
+- Test 7 - Determines life expectency on other planets and returns time left.
+- Test 8 - If a person has lived longer than the life expectancy, it will tell them how much longer they have lived. 
 
 ## Program setup instructions
 To view, access the Github pages site in your preferred browser. 

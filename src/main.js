@@ -18,7 +18,9 @@ $(document).ready(function() {
     person1.lifeGender();
     let response1 = `${person1.timeLeft()}`;
     let response2 = `${person1.displayAges()}`;
+    if (person1.lifeExpectency !== 0) {
     $('#response').append("<p>" + response2 + "</br>" + response1);
+    }
   });
 });
 

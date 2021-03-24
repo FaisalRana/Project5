@@ -55,8 +55,12 @@ export default class Person {
     } else if (this.race === "latin american" || this.race === "hispanic" || this.race === "latina"|| this.race === "latino") {
       this.lifeExpectency -= 5;
       return this.lifeExpectency;
-    }   else return alert("ERROR: Please enter one of the following races: native american, asian, african, caucasian or hispanic");
+    } else {
+      this.lifeExpectency = 0;
+      return alert("ERROR: Please enter one of the following races: native american, asian, african, caucasian or hispanic");
+    }
   }
+
   timeLeft() {
     let mercuryAge = this.mercuryAge();
     let marsAge = this.marsAge();
