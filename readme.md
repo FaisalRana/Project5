@@ -42,10 +42,10 @@ To setup:
 - Clone this repository to your desktop
 - Navigate to the top level of the directory
 - Install Dependencies using npm install
-- Run NPM Start to launch index.html from dist folder in a browser
 - Create production environment with terminal command $ npm run build
 - Lint code with the command $ npm run lint
 - Run tests in Jest with the command $ npm test
+- Run $npm start to launch index.html from dist folder in a browser, lint the code and clean up the directory
 
 ## Github pages website
 https://faisalrana.github.io/Project5a/
