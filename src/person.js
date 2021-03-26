@@ -1,4 +1,4 @@
-export default class Person {
+export default class Person { //business logic
   constructor(name1, age, gender, race) {
     this.name = name1;
     this.age = age;
@@ -57,7 +57,7 @@ export default class Person {
       return this.lifeExpectency;
     } else {
       this.lifeExpectency = 0;
-      return alert("ERROR: Please enter one of the following races: native american, asian, african, caucasian or hispanic");
+      return this.lifeExpectency;
     }
   }
 

@@ -56,7 +56,7 @@ let person6;
     expect(person3.lifeRace()).toEqual(84);      
     expect(person4.lifeRace()).toEqual(71);  
     expect(person5.lifeRace()).toEqual(89);
-    expect(person6.lifeRace()).toEqual();  
+    expect(person6.lifeRace()).toEqual(0);  
   });
   test('Test should return the number of years left on earth and each planet, if age is greater than life expectency, return how much longer the person lived', () => {
     person1.earthAge();

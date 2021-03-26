@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import Person from './person.js';
 
-$(document).ready(function() {
+$(document).ready(function() { //UI Logic 
   $('#space-age-form').submit(function(event) {
     event.preventDefault();
     let person1;
@@ -19,7 +19,9 @@ $(document).ready(function() {
     let response1 = `${person1.timeLeft()}`;
     let response2 = `${person1.displayAges()}`;
     if (person1.lifeExpectency !== 0) {
-    $('#response').append("<p>" + response2 + "</br>" + response1);
+      $('#response').append("<p>" + response2 + "</br>" + response1);
+    } else if (person1.lifeExpectency === 0) {
+      $('#response').append("ERROR: Please enter one of the following races: native american, american indian, black, white, asian, african, pakistani, european, caucasian, latina, latino or hispanic");
     }
   });
 });
